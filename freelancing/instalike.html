@@ -122,7 +122,7 @@
 </div> 
 
 
-<div id="wavecontent" class="container d-flex justify-content-center" style="padding-top: 10%;">
+<div id="wavecontent" class="container d-flex justify-content-center" style="padding-top: 10%;margin-bottom: 200px;">
     <div id="wave-left" class="col-ml-2" style="color: black;">
         <h1>Increase your Instagram Views</h1>
         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</span>
@@ -137,6 +137,38 @@
     </div>
 </div> 
 
+<div style="width: 100%;height: 600px;background-color: #EEEEEE;">
+    <div class="d-flex justify-content-center" style="padding-top: 110px;"><h1 class="" style="font-size: 60px;"><b>Reviews</b></h1></div>
+    
+    <div class="container justify-content-center d-flex" style="width: 100%;height: 260px;margin-top: 90px;padding-top: 40px;">
+        <span id="preReview" onclick="preReview();" class="col" style="padding-top: 70px;width: 20px;">&#x21E6;</span>
+        <div  class="col-11" style="width: 50px;height: 170px;">
+        <span id="reviewFinal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</span>
+        </div>
+        <span id="nextReview" onclick="nextReview();" class="col" style="padding-top: 70px;width: 20px;">&#x21E8</span>
+        
+    </div>
+
+</div>
+
+<script>
+
+var reviews = ["Have you ever searched for step-by-step instructions on how to delete a Google review? If you read a negative review of your business and feel your stomach churn, you are not alone. On the flip side, when a customer gushes over your company publicly, are you liable to do your happy dance?","There is more to it than a five-star rating. While the exact characteristics of good reviews vary by industry, there are certain fundamental elements that great reviews have in common. It’s worth taking note of them. You need to know what the end goal looks like if you want to achieve it.","A useful review includes enough detail to give others a feel for what happened. Potential customers want to know more than that someone else was happy. They want to know what exactly they liked so that they can gauge whether it aligns with their own preferences. Just compare this review of a Dominos"]
+
+var currentrew = 1;
+function changeRe(x){
+    currentrew = currentrew + x;
+    if (currentrew > reviews.length){currentrew = 1}
+    if( currentrew < 1){currentrew =  reviews.length};
+    document.getElementById("reviewFinal").innerText = reviews[currentrew-1];
+}
+function nextReview(){
+changeRe(1);
+}
+function preReview(){
+changeRe(-1);
+}
+</script>
     <!-- <div id="wave" class="" style="z-index: -20;position: absolute; ;">
         <svg width="1720" height="686" viewBox="0 0 1920 686" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1920" height="686" fill="#5EA3F4"/>
